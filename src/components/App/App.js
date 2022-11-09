@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Provider from '../Provider/Provider';
 import Wrapper from '../Wrapper/Wrapper';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../NavBar/Navbar';
 import Mercury from '../../pages/Mercury/Mercury';
 import Venus from '../../pages/Venus/Venus';
 import Earth from '../../pages/Earth/Earth';
@@ -27,7 +27,7 @@ const App = () => {
                     activePlanet={activePlanet}
                 />
                 <AnimatePresence>
-                    <Switch location={location} key={location.key}>
+                    <Routes path='/' location={location} key={location.key}>
                         <Route exact path="/mercury">
                             <Mercury />
                         </Route>
@@ -55,7 +55,7 @@ const App = () => {
                         <Route exact path="/">
                             <KeyVisual activePlanet={activePlanet} />
                         </Route>
-                    </Switch>
+                    </Routes>
                 </AnimatePresence>
             </Wrapper>
         </Provider>
