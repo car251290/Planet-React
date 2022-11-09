@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { starsBackground } from './starsBackground';
+import { starsBackground} from './starsBackground';
 
 export const Container = styled.div`
     position: relative;
