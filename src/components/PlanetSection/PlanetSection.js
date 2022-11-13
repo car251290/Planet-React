@@ -3,8 +3,8 @@ import { Section, Container } from './PlanetSectionStyles';
 import useReplaceInfo from './useReplaceInfo';
 import Tabs from './Tabs/Tabs';
 import Illustration from './Illustration/Illustration';
-import Intro from './Intro/Intro';
-import Info from './Info/Info';
+import Intro from './intro/intro';
+import Info from './info/info';
 
 const PlanetSection = ({ planetData }) => {
     const [handleClick, currentData, currentTab, isChanging] =
